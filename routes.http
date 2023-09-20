@@ -1,0 +1,37 @@
+# @name get-prompts
+GET http://localhost:3333/prompts
+
+###
+
+# @name upload
+POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4WxkTrZu0gW
+
+------WebKitFormBoundary7MA4WxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="1.mp3"
+Content-Type: audio/mpeg
+
+< ./1.mp3
+------WebKitFormBoundary7MA4WxkTrZu0gW--
+
+###
+
+# @name create-transcription
+POST http://localhost:3333/videos/4d417117-bcea-4ba6-8580-fe091a727a18/transcription
+Content-Type: application/json
+
+{
+    "prompt": "harry styles, music, cover, voice, guitar, acoustic guitar"
+}
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "4d417117-bcea-4ba6-8580-fe091a727a18",
+    "temperature": 0.8,
+    "prompt": "I need you generate for me, an comic resume of this media informed here as it were a mexican novel: ```{transcription}```"
+}

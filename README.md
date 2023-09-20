@@ -13,10 +13,16 @@ AI_KEY="PASTE_YOUR_KEY_HERE"
 ```
 
 So to run the api, follow these 5 steps:
-1 - click in the box "choose file", and select your .mp4 archive
-2 - click in upload button and wait the "success" message
-3 - select the prompt on selector above
-4 - select the temperature at slide (when higher it is, most commic it will be)
+
+1 - click in the box "choose file", and select your .mp4 archive;
+
+2 - click in upload button and wait the "success" message;
+
+3 - select the prompt on selector above;
+
+4 - select the temperature at slide (when higher it is, most commic it will be);
+
 5 - click execute and enjoy it!
+
 
 All Rights reserved to Renan-Teodoro (renant570@icloud.com) 
